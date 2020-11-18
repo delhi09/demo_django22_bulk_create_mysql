@@ -8,3 +8,9 @@ class Example(models.Model):
     fizz = models.CharField(max_length=200)
     buzz = models.IntegerField()
     fizzbuzz = models.DateTimeField("date published")
+
+class Food(models.Model):
+    class Meta:
+        db_table = "menu"
+    name=models.CharField(max_length=64)
+    price = models.IntegerField()
